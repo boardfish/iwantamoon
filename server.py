@@ -29,32 +29,36 @@ def choose_sfx(x):
             5: "https://young-sierra-60676.herokuapp.com/8bitmoonget",
             }.get(x, "https://young-sierra-60676.herokuapp.com/moonget")
 
-def gen_moon():
+
+def random_moon():
     conn = db_connect.connect()
     count = conn.execute("select Count(*) from moons").fetchone()[0]
     moon_id = randint(1,count)
     query = conn.execute("select * from moons where id =%d "  %int(moon_id))
     result = query.fetchone()
-    sfx = choose_sfx(result['moon_type'])
-    location = result['kingdom']
-    postgame = result['is_postgame'] == 'True'
-    template = "Let's find a moon! " + result['name'] + ". Try searching for this moon in the " + result['kingdom'] + " Kingdom" + (" after you've beaten the game.", ".")[result['is_postgame'] == 'True']
+    gen_moon(result)
+
+def gen_moon(record):
+    sfx = choose_sfx(record['moon_type'])
+    location = record['kingdom']
+    postgame = record['is_postgame'] == "True"
+    template = "Let's find a moon! " + record['name'] + ". Try searching for this moon in the " + location + " Kingdom" + (" after you've beaten the game.", ".")[postgame]
     return [template, sfx, location, postgame]
 
 def get_moon_alexa():
-    moon = gen_moon()
+    moon = random_moon()
     print("MOON:", moon)
     print("audio("+ moon[0]+ ").play("+moon[1]+")")
-    return audio(moon[0]).play(moon[1]).simple_card(title='Let\'s Find A Moon!', content=moon[0]+'\nThis'+(' post-game ', '')[moon[3]]+ 'moon can be found in the '+moon[2]+' Kingdom.')
+    return audio(moon[0]).play(moon[1]).simple_card(title='Let\'s Find A Moon!', content=moon[0])
 
 @ask.launch
 def launch_moon():
-    moon = gen_moon()
+    moon = random_moon()
     return audio(moon[0]).play(moon[1]).simple_card(title='Let\'s Find A Moon!', content=moon[0]+'\nThis'+('',' post-game ')[moon[3]]+ 'moon can be found in the '+moon[2]+' Kingdom.')
 
 @ask.intent('MoonIntent')
 def intent_moon():
-    moon = gen_moon()
+    moon = random_moon()
     return audio(moon[0]).play(moon[1]).simple_card(title='Let\'s Find A Moon!', content=moon[0]+'\nThis moon can be found in the '+moon[2]+' Kingdom.')
 
 class Moons(Resource):
