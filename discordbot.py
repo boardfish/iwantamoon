@@ -21,7 +21,7 @@ def gen_moon():
     moon_id = randint(1,count)
     query = conn.execute("select * from moons where id =%d "  %int(moon_id))
     result = query.fetchone()
-    template = "**Let's find a moon!** " + result['name'] + " You can find this moon in the " + result['kingdom'] + " Kingdom" + ("post-game.", ".")[[result['is_postgame']]]
+    template = "__**Let's find a moon!**__\n__" + result['name'] + "__\nYou can find this moon in the **" + result['kingdom'] + " Kingdom**" + ("post-game.", ".")[result['is_postgame']]
     sfx = choose_sfx(result['moon_type'])
     return [template, sfx]
 
@@ -36,11 +36,9 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    if message.content.startswith('!test'):
-        counter = 0
+    if message.content.startswith('!moon'):
         tmp = await client.send_message(message.channel, gen_moon()[0])
-    elif message.content.startswith('!sleep'):
-        await asyncio.sleep(5)
-        await client.send_message(message.channel, 'Done sleeping')
+    elif message.content.startswith('!credits'):
+        await client.send_message(message.channel, 'This bot is by **boardfish**, made during BrumHacks 7.0.')
 
 client.run(os.getenv('DISCORD_TOKEN', 'token'))
