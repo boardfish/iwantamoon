@@ -74,7 +74,7 @@ def intent_moon():
 @ask.intent('KingdomMoonIntent', mapping={'kingdom': 'Kingdom'}, default={'kingdom':'Cap'})
 def intent_search_moon(kingdom):
     moon = search_moon(kingdom)
-    if !moon:
+    if not moon:
         return audio("I couldn't find anything. Check your Alexa app to see if I got that right.")
     return audio(moon[0]).play(moon[1]).simple_card(title='Let\'s Find A Moon in the {} Kingdom!'.format(kingdom), content=moon[0])
 
