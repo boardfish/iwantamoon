@@ -84,6 +84,10 @@ def bigmoonget():
 def multimoonget():
     return app.send_static_file('multimoonget.mp3')
 
+@app.route('/starget')
+def multimoonget():
+    return app.send_static_file('starget.mp3')
+
 api.add_resource(Moons, '/') # Route_1
 api.add_resource(RandomMoon, '/random') # Route_2
 
