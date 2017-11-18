@@ -26,6 +26,7 @@ def choose_sfx(x):
             2: "https://young-sierra-60676.herokuapp.com/bigmoonget",
             3: "https://young-sierra-60676.herokuapp.com/multimoonget",
             4: "https://young-sierra-60676.herokuapp.com/starget",
+            5: "https://young-sierra-60676.herokuapp.com/8bitmoonget",
             }.get(x, "https://young-sierra-60676.herokuapp.com/moonget")
 
 def gen_moon():
@@ -87,6 +88,10 @@ def multimoonget():
 @app.route('/starget')
 def starget():
     return app.send_static_file('starget.mp3')
+
+@app.route('/8bitmoonget')
+def starget():
+    return app.send_static_file('8bitmoonget.mp3')
 
 api.add_resource(Moons, '/') # Route_1
 api.add_resource(RandomMoon, '/random') # Route_2
