@@ -9,6 +9,9 @@ from flask.ext.jsonpify import jsonify
 from random import randint 
 import os
 
+import discord
+import asyncio
+
 # Connect DB
 db_connect = create_engine('sqlite:///moons.db')
 # Initialise Flask app
@@ -82,9 +85,6 @@ api.add_resource(Moons, '/') # Route_1
 api.add_resource(RandomMoon, '/random') # Route_2
 
 # Discord bot
-
-mport discord
-import asyncio
 
 client = discord.Client()
 
