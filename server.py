@@ -44,6 +44,7 @@ def gen_moon():
 def get_moon_alexa():
     moon = gen_moon()
     print("MOON:", moon)
+    print("audio("+ moon[0]+ ").play("+moon[1]+")")
     return audio(moon[0]).play(moon[1])
 
 @ask.launch
