@@ -36,7 +36,8 @@ def gen_moon():
     result = query.fetchone()
     template = "You got a moon! " + result['name']
     sfx = choose_sfx(result['moon_type'])
-    return [template, sfx]
+    location = result['kingdom']
+    return [template, sfx, location]
 
 def get_moon_alexa():
     moon = gen_moon()
