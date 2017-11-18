@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import logging
-from flask import Flask, request
+from flask import Flask, request 
 from flask_restful import Resource, Api
 from flask_ask import Ask, statement, question, session, audio
 from sqlalchemy import create_engine
@@ -8,9 +8,6 @@ from json import dumps
 from flask.ext.jsonpify import jsonify
 from random import randint 
 import os
-
-import discord
-import asyncio
 
 # Connect DB
 db_connect = create_engine('sqlite:///moons.db')
@@ -88,28 +85,7 @@ def multimoonget():
 api.add_resource(Moons, '/') # Route_1
 api.add_resource(RandomMoon, '/random') # Route_2
 
-# Discord bot
-
-client = discord.Client()
-
-@client.event
-async def on_ready():
-    print('Logged in as')
-    print(client.user.name)
-    print(client.user.id)
-    print('------')
-
-@client.event
-async def on_message(message):
-    if message.content.startswith('!test'):
-        counter = 0
-        tmp = await client.send_message(message.channel, gen_moon()[0])
-    elif message.content.startswith('!sleep'):
-        await asyncio.sleep(5)
-        await client.send_message(message.channel, 'Done sleeping')
-
 # Init Flask etc.
 if __name__ == '__main__':
-     app.run(port=os.getenv('PORT', '5000'), host='0.0.0.0')
-# Init Discord bot
-client.run(os.getenv('DISCORD_TOKEN', 'token'))
+    app.run(port=os.getenv('PORT', '5000'), host='0.0.0.0')
+    # Init Discord bot
