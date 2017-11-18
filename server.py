@@ -90,7 +90,7 @@ def starget():
     return app.send_static_file('starget.mp3')
 
 @app.route('/8bitmoonget')
-def starget():
+def 8bitmoonget():
     return app.send_static_file('8bitmoonget.mp3')
 
 api.add_resource(Moons, '/') # Route_1
