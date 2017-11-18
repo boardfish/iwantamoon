@@ -38,7 +38,7 @@ def gen_moon():
     sfx = choose_sfx(result['moon_type'])
     location = result['kingdom']
     postgame = result['is_postgame'] == 'True'
-    template = "Let's find a moon! " + result['name'] + ". Try searching for this moon in the " + result['kingdom'] + " Kingdom" + (" after you've beaten the game.", ".")[result['is_postgame']]
+    template = "Let's find a moon! " + result['name'] + ". Try searching for this moon in the " + result['kingdom'] + " Kingdom" + (" after you've beaten the game.", ".")[result['is_postgame'] == 'True']
     return [template, sfx, location, postgame]
 
 def get_moon_alexa():
