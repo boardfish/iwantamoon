@@ -29,6 +29,13 @@ def choose_sfx(x):
             5: "https://young-sierra-60676.herokuapp.com/8bitmoonget",
             }.get(x, "https://young-sierra-60676.herokuapp.com/moonget")
 
+def search_moon(query):
+    conn = db_connect.connect()
+    # count = conn.execute("select Count(*) from moons").fetchone()[0]
+    # moon_id = randint(1,count)
+    query = conn.execute("select * from moons where kingdom=% ORDER BY RAND() LIMIT 1 "  %str(query))
+    result = query.fetchone()
+    return gen_moon(result)
 
 def random_moon():
     conn = db_connect.connect()
@@ -60,6 +67,11 @@ def launch_moon():
 def intent_moon():
     moon = random_moon()
     return audio(moon[0]).play(moon[1]).simple_card(title='Let\'s Find A Moon!', content=moon[0]+'\nThis moon can be found in the '+moon[2]+' Kingdom.')
+
+@ask.intent('KingdomMoonIntent', mapping={'kingdom': 'Kingdom'}, default={'kingdom':'Cap'})
+def intent_search_moon(kingdom):
+    moon = search_moon(kingdom)
+    return audio(moon[0]).play(moon[1]).simple_card(title='Let\'s Find A Moon in the {} Kingdom!'.format(kingdom), content=moon[0])
 
 class Moons(Resource):
     def get(self):
