@@ -2,7 +2,7 @@
 import logging
 from flask import Flask, request
 from flask_restful import Resource, Api
-from flask_ask import Ask, statement, question, session
+from flask_ask import Ask, statement, question, session, audio
 from sqlalchemy import create_engine
 from json import dumps
 from flask.ext.jsonpify import jsonify
@@ -24,7 +24,7 @@ def moon():
     moon_id = randint(1,count)
     query = conn.execute("select name from moons where id =%d "  %int(moon_id))
     result = query.fetchone()[0]
-    return statement("You got a moon! " + result)
+    return audio("You got a moon! " + result).play("https://young-sierra-60676.herokuapp.com/moonget")
 
 class Moons(Resource):
     def get(self):
