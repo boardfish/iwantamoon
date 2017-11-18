@@ -6,7 +6,8 @@ from flask_ask import Ask, statement, question, session, audio
 from sqlalchemy import create_engine
 from json import dumps
 from flask.ext.jsonpify import jsonify
-from random import randint import os
+from random import randint 
+import os
 
 # Connect DB
 db_connect = create_engine('sqlite:///moons.db')
