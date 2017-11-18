@@ -10,7 +10,7 @@ from random import randint
 import os
 
 db_connect = create_engine('sqlite:///moons.db')
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='')
 ask = Ask(app, "/")
 logging.getLogger("flask_ask").setLevel(logging.DEBUG)
 api = Api(app)
@@ -42,6 +42,9 @@ class RandomMoon(Resource):
         result = {'data': [dict(zip(tuple (query.keys()) ,i)) for i in query.cursor]}
         return jsonify(result)
         
+@app.route('/moonget')
+def moonget():
+    return app.send_static_file('moonget.mp3')
 
 api.add_resource(Moons, '/') # Route_1
 api.add_resource(RandomMoon, '/random') # Route_2
