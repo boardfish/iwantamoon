@@ -9,11 +9,6 @@ name = "pypi"
 
 
 
-[requires]
-
-python_version = '2.7'
-
-
 [packages]
 
 flask = "*"
@@ -21,3 +16,4 @@ flask-jsonpify = "*"
 flask-sqlalchemy = "*"
 flask-restful = "*"
 flask-ask = "*"
+"discord.py" = "*"
