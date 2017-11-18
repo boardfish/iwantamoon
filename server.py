@@ -42,14 +42,12 @@ def get_moon_alexa():
     moon = gen_moon()
     print("MOON:", moon)
     print("audio("+ moon[0]+ ").play("+moon[1]+")")
-    return audio(moon[0]).play(moon[1]) \
-        .simple_card(title='You Got A Moon!', content=moon[0]+' '+moon[2])
+    return audio(moon[0]).play(moon[1]).simple_card(title='You Got A Moon!', content=moon[0]+' '+moon[2])
 
 @ask.launch
 def launch_moon():
     moon = gen_moon()
-    return audio(moon[0]).play(moon[1])
-        .simple_card(title='You Got A Moon!', content=moon[0]+' '+moon[2])
+    return audio(moon[0]).play(moon[1]).simple_card(title='You Got A Moon!', content=moon[0]+' '+moon[2])
 
 @ask.intent('MoonIntent')
 def intent_moon():
