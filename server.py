@@ -33,4 +33,4 @@ api.add_resource(RandomMoon, '/random') # Route_2
 
 
 if __name__ == '__main__':
-     app.run(port=os.getenv('PORT', '5002'))
+     app.run(port=os.getenv('PORT', '5002'), host='0.0.0.0')
