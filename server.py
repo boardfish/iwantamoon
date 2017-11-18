@@ -16,6 +16,13 @@ logging.getLogger("flask_ask").setLevel(logging.DEBUG)
 api = Api(app)
 
 @ask.launch
+def moon():
+    conn = db_connect.connect()
+    count = conn.execute("select Count(*) from moons").fetchone()[0]
+    moon_id = randint(1,count)
+    query = conn.execute("select name from moons where id =%d "  %int(moon_id))
+    result = query.fetchone()[0]
+    return audio("You got a moon! " + result).play("https://young-sierra-60676.herokuapp.com/moonget")
 
 @ask.intent('MoonIntent')
 def moon():
