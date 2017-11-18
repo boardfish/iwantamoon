@@ -15,14 +15,24 @@ ask = Ask(app, "/")
 logging.getLogger("flask_ask").setLevel(logging.DEBUG)
 api = Api(app)
 
+def choose_sfx(x):
+    return {
+            1: "https://young-sierra-60676.herokuapp.com/moonget",
+            2: "https://young-sierra-60676.herokuapp.com/bigmoonget",
+            3: "https://young-sierra-60676.herokuapp.com/multimoonget",
+            4: "https://young-sierra-60676.herokuapp.com/starget",
+            }.get(x, "https://young-sierra-60676.herokuapp.com/moonget")
+
 @ask.launch
 def launch_moon():
     conn = db_connect.connect()
     count = conn.execute("select Count(*) from moons").fetchone()[0]
     moon_id = randint(1,count)
-    query = conn.execute("select name from moons where id =%d "  %int(moon_id))
-    result = query.fetchone()[0]
-    return audio("You got a moon! " + result).play("https://young-sierra-60676.herokuapp.com/moonget")
+    query = conn.execute("select * from moons where id =%d "  %int(moon_id))
+    result = query.fetchone()
+    template = "You got a moon! " + result['name']
+    sfx = choose_sfx(result['moon_type'])
+    return audio(template).play(sfx)
 
 @ask.intent('MoonIntent')
 def moon():
@@ -52,6 +62,14 @@ class RandomMoon(Resource):
 @app.route('/moonget')
 def moonget():
     return app.send_static_file('moonget.mp3')
+
+@app.route('/bigmoonget')
+def bigmoonget():
+    return app.send_static_file('bigmoonget.mp3')
+
+@app.route('/multimoonget')
+def multimoonget():
+    return app.send_static_file('multimoonget.mp3')
 
 api.add_resource(Moons, '/') # Route_1
 api.add_resource(RandomMoon, '/random') # Route_2
