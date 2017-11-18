@@ -33,7 +33,7 @@ def search_moon(query):
     conn = db_connect.connect()
     # count = conn.execute("select Count(*) from moons").fetchone()[0]
     # moon_id = randint(1,count)
-    queryex = conn.execute("select * from moons where kingdom=%s ORDER BY RANDOM() LIMIT 1 "  %str(query))
+    queryex = conn.execute("select * from moons where kingdom='%s' ORDER BY RANDOM() LIMIT 1 "  %str(query))
     result = queryex.fetchone()
     return gen_moon(result)
 
