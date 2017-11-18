@@ -49,11 +49,13 @@ def get_moon_alexa():
 
 @ask.launch
 def launch_moon():
-    get_moon_alexa()
+    moon = gen_moon()
+    return audio(moon[0]).play(moon[1])
 
 @ask.intent('MoonIntent')
 def intent_moon():
-    get_moon_alexa()
+    moon = gen_moon()
+    return audio(moon[0]).play(moon[1])
 
 class Moons(Resource):
     def get(self):
