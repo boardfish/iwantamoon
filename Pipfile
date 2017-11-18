@@ -7,13 +7,16 @@ name = "pypi"
 
 [dev-packages]
 
+
+
 [requires]
 
-python_version = '3.6.2'
+python_full_version = '3.6.2'
+
 
 [packages]
 
-flask = "*"
+flask = "==0.12.1"
 flask-jsonpify = "*"
 flask-sqlalchemy = "*"
 flask-restful = "*"
