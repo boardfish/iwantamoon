@@ -29,8 +29,8 @@ Cap | Cap Kingdom Timer Challenge 2 | True | 1
 Cap | Cap Kingdom Master Cup | True | 1
 Cap | Roll On and On | True | 1
 Cap | Precision Rolling | True | 1
-Cascade | Our First Power Moon | False | 1
-Cascade | Multi Moon Atop the Falls | False | 1
+Cascade | Our First Power Moon | False | 2
+Cascade | Multi Moon Atop the Falls | False | 3
 Cascade | Chomp Through the Rocks | False | 1
 Cascade | Behind the Waterfall | False | 1
 Cascade | On Top of the Rubble | False | 1
@@ -69,10 +69,10 @@ Cascade | Across the Mysterious Clouds | True | 1
 Cascade | Atop a Wall Among the Clouds | True | 1
 Cascade | Across the Gusty Bridges | True | 1
 Cascade | Flying Far Away from Gusty Bridges | False | 1
-Sand | Atop the Highest Tower | False | 1
-Sand | Moon Shards in the Sand | False | 1
-Sand | Showdown on the Inverted Pyramid | False | 1
-Sand | The Hole in the Desert | False | 1
+Sand | Atop the Highest Tower | False | 2
+Sand | Moon Shards in the Sand | False | 2
+Sand | Showdown on the Inverted Pyramid | False | 3
+Sand | The Hole in the Desert | False | 3
 Sand | Overlooking the Desert Town | False | 1
 Sand | Alcove in the Ruins | False | 1
 Sand | On the Leaning Pillar | False | 1
@@ -158,7 +158,7 @@ Sand | Colossal Ruins: Dash! Jump! | True | 1
 Sand | Sinking Colossal Ruins: Hurry! | True | 1
 Sand | Through the Freezing Waterway | True | 1
 Sand | Freezing Waterway: Hidden Room | True | 1
-Lake | Broodals Over the Lake | False | 1
+Lake | Broodals Over the Lake | False | 3
 Lake | Dorrie-Back Rider | False | 1
 Lake | Cheep Cheep Crossing | False | 1
 Lake | End of the Hidden Passage | False | 1
@@ -200,10 +200,10 @@ Lake | Love by the Lake | True | 1
 Lake | Lake Kingdom Master Cup | True | 1
 Lake | Waves of Poison: Hoppin' Over | True | 1
 Lake | Waves of Poison: Hop to It! | True | 1
-Wooded | Road to Sky Garden | False | 1
-Wooded | Flower Thieves of Sky Garden | False | 1
-Wooded | Path to the Secret Flower Field | False | 1
-Wooded | Defend the Secret Flower Field! | False | 1
+Wooded | Road to Sky Garden | False | 2
+Wooded | Flower Thieves of Sky Garden | False | 3
+Wooded | Path to the Secret Flower Field | False | 2
+Wooded | Defend the Secret Flower Field! | False | 3
 Wooded | Behind the Rock Wall | False | 1
 Wooded | Back Way up the Mountain | False | 1
 Wooded | Rolling Rock in the Woods | False | 1
@@ -284,7 +284,7 @@ Cloud | Crossing the Cloud Sea | True | 1
 Cloud | Taking Notes: Up and Down | True | 1
 Cloud | Picture Match: A Stellar Goomba | True | 1
 Cloud | King of the Cube! | True | 1
-Cloud | The sixth Face | True | 1
+Cloud | The Sixth Face | True | 1
 Lost | Atop the Propeller Pillar | False | 1
 Lost | Below the Cliff's Edge | False | 1
 Lost | Inside the Stone Cage | False | 1
@@ -320,13 +320,13 @@ Lost | Stretch and Traverse the Jungle | True | 1
 Lost | Aglow in the Jungle | True | 1
 Lost | Chasing Klepto | True | 1
 Lost | Extremely Hot Bath | True | 1
-Metro | New Donk City's Pest Problem | False | 1
-Metro | Drummer on Board! | False | 1
-Metro | Guitarist on Board! | False | 1
-Metro | Bassist on Board! | False | 1
-Metro | Trumpeter on Board! | False | 1
-Metro | Powering Up the Station | False | 1
-Metro | A Traditional Festival | False | 1
+Metro | New Donk City's Pest Problem | False | 2
+Metro | Drummer on Board! | False | 2
+Metro | Guitarist on Board! | False | 2
+Metro | Bassist on Board! | False | 2
+Metro | Trumpeter on Board! | False | 2
+Metro | Powering Up the Station | False | 3
+Metro | A Traditional Festival | False | 3
 Metro | Inside an Iron Girder | False | 1
 Metro | Swaying in the Breeze | False | 1
 Metro | Girder Sandwich | False | 1
@@ -401,11 +401,11 @@ Metro | Swinging Scaffolding: Jump! | True | 1
 Metro | Swinging Scaffolding: Break! | True | 1
 Metro | Motor Scooter Daredevil! | True | 1
 Metro | Full-Throttle Scooting! | True | 1
-Snow | The Icicle Barrier | False | 1
-Snow | The Ice Wall Barrier | False | 1
-Snow | The Gusty Barrier | False | 1
-Snow | The Snow Mountain Barrier | False | 1
-Snow | The Bound Bowl Grand Prix | False | 1
+Snow | The Icicle Barrier | False | 2
+Snow | The Ice Wall Barrier | False | 2
+Snow | The Gusty Barrier | False | 2
+Snow | The Snow Mountain Barrier | False | 2
+Snow | The Bound Bowl Grand Prix | False | 3
 Snow | Entrance to Shiveria | False | 1
 Snow | Behind Snowy Mountain | False | 1
 Snow | Shining in the Snow in Town | False | 1
@@ -527,11 +527,11 @@ Seaside | Aim! Poke! | True | 1
 Seaside | Poke! Roll! | True | 1
 Seaside | The Spinning Maze: Search! | True | 1
 Seaside | The Spinning Maze: Open! | True | 1
-Luncheon | The Broodals Are After Some Cookin' | False | 1
-Luncheon | Under the Cheese Rocks | False | 1
-Luncheon | Big Pot on the Volcano - Dive In! | False | 1
-Luncheon | Climb Up the Cascading Magma | False | 1
-Luncheon | Cookatiel Showdown | False | 1
+Luncheon | The Broodals Are After Some Cookin' | False | 2
+Luncheon | Under the Cheese Rocks | False | 2
+Luncheon | Big Pot on the Volcano - Dive In! | False | 3
+Luncheon | Climb Up the Cascading Magma | False | 2
+Luncheon | Cookatiel Showdown | False | 3
 Luncheon | Piled in the Salt | False | 1
 Luncheon | Lurking in the Pillar's Shadow | False | 1
 Luncheon | Atop the Jutting Crag | False | 1
@@ -595,7 +595,7 @@ Luncheon | Volcano Cave Cruisin' | True | 1
 Luncheon | Volcano Cave and Mysterious Clouds | True | 1
 Luncheon | Treasure of the Lava Islands | True | 1
 Luncheon | Flying Over the Lava Islands | True | 1
-Ruined | Battle with the Lord of Lightning! | False | 1
+Ruined | Battle with the Lord of Lightning! | False | 3
 Ruined | In the Ancient Treasure Chest | False | 1
 Ruined | Roulette Tower: Climbed | False | 1
 Ruined | Roulette Tower: Stopped | False | 1
@@ -701,114 +701,114 @@ Moon | Moon Kingdom Timer Challenge 2 | True | 1
 Moon | Walking on the Moon: Again! | True | 1
 Moon | Moon Kingdom Master Cup | True | 1
 Moon | Taking Notes: In Low Gravity | True | 1
-Moon | Center of the Galaxy | True | 1
-Moon | Edge of the Galaxy | True | 1
+Moon | Center of the Galaxy | True | 5
+Moon | Edge of the Galaxy | True | 5
 Moon | Navigating Giant Swings | True | 1
 Moon | A Swing on Top of a Swing | True | 1
-Mushroom | Perched on the Castle Roof | False | 1
-Mushroom | Pops Out of the Tail | False | 1
-Mushroom | Caught Hopping at Peach's Castle | False | 1
-Mushroom | Gardening for Toad: Garden Seed | False | 1
-Mushroom | Gardening for Toad: Field Seed | False | 1
-Mushroom | Gardening for Toad: Pasture Seed | False | 1
-Mushroom | Gardening for Toad: Lake Seed | False | 1
-Mushroom | Grow a Flower Garden | False | 1
-Mushroom | Mushroom Kingdom Timer Challenge | False | 1
-Mushroom | Found at Peach's Castle, Good Dog | False | 1
-Mushroom | Taking Notes: Around the Well | False | 1
-Mushroom | Herding Sheep at Peach's Castle | False | 1
-Mushroom | Gobbling Fruit with Yoshi | False | 1
-Mushroom | Yoshi's Second Helping | False | 1
-Mushroom | Yoshi's All Filled Up | False | 1
-Mushroom | Love at Peach's Castle | False | 1
-Mushroom | Toad Defender | False | 1
-Mushroom | Forever Onward, Captain Toad | False | 1
-Mushroom | Jammin' in the Mushroom Kingdom | False | 1
-Mushroom | Shopping Near Peach's Castle | False | 1
-Mushroom | Mushroom Kingdom Regular Cup | False | 1
-Mushroom | Mushroom Kingdom Master Cup | False | 1
-Mushroom | Picture Match: Basically Mario | False | 1
-Mushroom | Picture Match: A Stellar Mario | False | 1
-Mushroom | Light from the Ceiling | False | 1
-Mushroom | Loose-Tile Trackdown | False | 1
-Mushroom | Totally Classic | False | 1
-Mushroom | Courtyard Chest Trap | False | 1
-Mushroom | Yoshi's Feast in the Sea of Clouds | False | 1
-Mushroom | Sunken Star in the Sea of Clouds | False | 1
-Mushroom | Secret 2D Treasure | False | 1
-Mushroom | 2D Boost from Bullet Bill | False | 1
-Mushroom | Tussle in Tostarena: Rematch | False | 1
-Mushroom | Struggle in Steam Gardens: Rematch | False | 1
-Mushroom | Dust-Up in New Donk City: Rematch | False | 1
-Mushroom | Battle in Bubblaine: Rematch | False | 1
-Mushroom | Blowup at Mount Volbono: Rematch | False | 1
-Mushroom | Rumble in Crumbleden: Rematch | False | 1
-Mushroom | Secret Path to Peach's Castle | False | 1
-Mushroom | A Tourist in Mushroom Kingdom | False | 1
-Mushroom | Found with Mushroom Kingdom Art | False | 1
-Mushroom | Hat-and-Seek: Mushroom Kingdom | False | 1
-Mushroom | Princess Peach, Home Again | False | 1
-Mushroom | Rescue Princess Peach | True | 1
-Mushroom | Bring peace to all 14 kingdoms in the world. | True | 1
-Mushroom | Collect 100 Power Moons. | True | 1
-Mushroom | Collect 300 Power Moons. | True | 1
-Mushroom | Collect 600 Power Moons. | True | 1
-Mushroom | Buy 13 things using regional coins. | True | 1
-Mushroom | Collect 10 8-Bit Power Moons. | True | 1
-Mushroom | Collect 20 8-Bit Power Moons. | True | 1
-Mushroom | Collect Power Moons from 15 treasure chests. | True | 1
-Mushroom | Collect Power Moons from 25 treasure chests. | True | 1
-Mushroom | Collect Power Moons from taking Notes 5 times. | True | 1
-Mushroom | Collect Power Moons from taking Notes 20 times. | True | 1
-Mushroom | Collect Power Moons from Timer Challenges 10 times. | True | 1
-Mushroom | Collect Power Moons from Timer Challenges 25 times. | True | 1
-Mushroom | Meet up with Captain Toad 5 times. | True | 1
-Mushroom | Meet up with Captain Toad 10 times. | True | 1
-Mushroom | Meet up with Princess Peach as she travels the world 5 times. | True | 1
-Mushroom | Meet up with Princess Peach as she travels the world 10 times. | True | 1
-Mushroom | Herd sheep to collect a Power Moon 4 times. | True | 1
-Mushroom | Collect 5 Power Moons from Goombette. | True | 1
-Mushroom | Fish for Power Moons as Lakitu 3 times. | True | 1
-Mushroom | Grow seeds to collect Power Moons 5 times. | True | 1
-Mushroom | Grow seeds to collect Power Moons 10 times. | True | 1
-Mushroom | Catch 5 rabbits to collect Power Moons. | True | 1
-Mushroom | Catch 10 rabbits to collect Power Moons. | True | 1
-Mushroom | Dig up 15 Power Moons by Ground Pounding. | True | 1
-Mushroom | Dig up 45 Power Moons by Ground Pounding. | True | 1
-Mushroom | Collect 3 Power Moons by throwing your hat on things. | True | 1
-Mushroom | Collect 10 Power Moons by throwing your hat on things. | True | 1
-Mushroom | Collect 5 Power Moons from migrating birds. | True | 1
-Mushroom | Collect 3 Power Moons by wearing certain outfits. | True | 1
-Mushroom | Collect 8 Power Moons by wearing certain outfits. | True | 1
-Mushroom | Collect 15 Power Moons by wearing certain outfits. | True | 1
-Mushroom | Find 5 Bonneters hidden on people's heads. | True | 1
-Mushroom | Play the music that Toad wants to hear (5). | True | 1
-Mushroom | Collect 5 Power Moons using Hint Art. | True | 1
-Mushroom | Collect 15 Power Moons using Hint Art. | True | 1
-Mushroom | Collect 3 Power Moons playing Slots. | True | 1
-Mushroom | Win 10 Koopa Freerunning races. | True | 1
-Mushroom | Win 22 Koopa Freerunning races. | True | 1
-Mushroom | Receive passing scores in Koopa Trace-Walking (5). | True | 1
-Mushroom | Answer all of the Sphynx's questions correctly (3). | True | 1
-Mushroom | Collect 10 souvenirs and stickers. | True | 1
-Mushroom | Collect 20 souvenirs and stickers. | True | 1
-Mushroom | Collect 40 souvenirs and stickers. | True | 1
-Mushroom | Capture 20 targets. | True | 1
-Mushroom | Capture 35 targets. | True | 1
-Mushroom | Capture 45 targets. | True | 1
-Mushroom | Collect 15 hats. | True | 1
-Mushroom | Collect 35 hats. | True | 1
-Mushroom | Collect 15 outfits. | True | 1
-Mushroom | Collect 35 outfits. | True | 1
-Mushroom | Open 14 Moon Rocks. | True | 1
-Mushroom | Travel through 10 warp holes. | True | 1
-Mushroom | Activate 40 Checkpoint flags. | True | 1
-Mushroom | Activate 80 Checkpoint flags. | True | 1
-Mushroom | Collect 1000 coins. | True | 1
-Mushroom | Collect 5000 coins. | True | 1
-Mushroom | Collect 10000 coins. | True | 1
-Mushroom | Jump 10000 times. | True | 1
-Mushroom | Throw Cappy 5000 times. | True | 1
+Mushroom | Perched on the Castle Roof | False | 4
+Mushroom | Pops Out of the Tail | False | 4
+Mushroom | Caught Hopping at Peach's Castle | False | 4
+Mushroom | Gardening for Toad: Garden Seed | False | 4
+Mushroom | Gardening for Toad: Field Seed | False | 4
+Mushroom | Gardening for Toad: Pasture Seed | False | 4
+Mushroom | Gardening for Toad: Lake Seed | False | 4
+Mushroom | Grow a Flower Garden | False | 4
+Mushroom | Mushroom Kingdom Timer Challenge | False | 4
+Mushroom | Found at Peach's Castle, Good Dog | False | 4
+Mushroom | Taking Notes: Around the Well | False | 4
+Mushroom | Herding Sheep at Peach's Castle | False | 4
+Mushroom | Gobbling Fruit with Yoshi | False | 4
+Mushroom | Yoshi's Second Helping | False | 4
+Mushroom | Yoshi's All Filled Up | False | 4
+Mushroom | Love at Peach's Castle | False | 4
+Mushroom | Toad Defender | False | 4
+Mushroom | Forever Onward, Captain Toad | False | 4
+Mushroom | Jammin' in the Mushroom Kingdom | False | 4
+Mushroom | Shopping Near Peach's Castle | False | 4
+Mushroom | Mushroom Kingdom Regular Cup | False | 4
+Mushroom | Mushroom Kingdom Master Cup | False | 4
+Mushroom | Picture Match: Basically Mario | False | 4
+Mushroom | Picture Match: A Stellar Mario | False | 4
+Mushroom | Light from the Ceiling | False | 4
+Mushroom | Loose-Tile Trackdown | False | 4
+Mushroom | Totally Classic | False | 4
+Mushroom | Courtyard Chest Trap | False | 4
+Mushroom | Yoshi's Feast in the Sea of Clouds | False | 4
+Mushroom | Sunken Star in the Sea of Clouds | False | 4
+Mushroom | Secret 2D Treasure | False | 5
+Mushroom | 2D Boost from Bullet Bill | False | 5
+Mushroom | Tussle in Tostarena: Rematch | False | 3
+Mushroom | Struggle in Steam Gardens: Rematch | False | 3
+Mushroom | Dust-Up in New Donk City: Rematch | False | 3
+Mushroom | Battle in Bubblaine: Rematch | False | 3
+Mushroom | Blowup at Mount Volbono: Rematch | False | 3
+Mushroom | Rumble in Crumbleden: Rematch | False | 3
+Mushroom | Secret Path to Peach's Castle | False | 4
+Mushroom | A Tourist in Mushroom Kingdom | False | 4
+Mushroom | Found with Mushroom Kingdom Art | False | 4
+Mushroom | Hat-and-Seek: Mushroom Kingdom | False | 4
+Mushroom | Princess Peach, Home Again | False | 4
+Mushroom | Rescue Princess Peach | True | 4
+Mushroom | Bring peace to all 14 kingdoms in the world. | True | 4
+Mushroom | Collect 100 Power Moons. | True | 4
+Mushroom | Collect 300 Power Moons. | True | 4
+Mushroom | Collect 600 Power Moons. | True | 4
+Mushroom | Buy 13 things using regional coins. | True | 4
+Mushroom | Collect 10 8-Bit Power Moons. | True | 4
+Mushroom | Collect 20 8-Bit Power Moons. | True | 4
+Mushroom | Collect Power Moons from 15 treasure chests. | True | 4
+Mushroom | Collect Power Moons from 25 treasure chests. | True | 4
+Mushroom | Collect Power Moons from taking Notes 5 times. | True | 4
+Mushroom | Collect Power Moons from taking Notes 20 times. | True | 4
+Mushroom | Collect Power Moons from Timer Challenges 10 times. | True | 4
+Mushroom | Collect Power Moons from Timer Challenges 25 times. | True | 4
+Mushroom | Meet up with Captain Toad 5 times. | True | 4
+Mushroom | Meet up with Captain Toad 10 times. | True | 4
+Mushroom | Meet up with Princess Peach as she travels the world 5 times. | True | 4
+Mushroom | Meet up with Princess Peach as she travels the world 10 times. | True | 4
+Mushroom | Herd sheep to collect a Power Moon 4 times. | True | 4
+Mushroom | Collect 5 Power Moons from Goombette. | True | 4
+Mushroom | Fish for Power Moons as Lakitu 3 times. | True | 4
+Mushroom | Grow seeds to collect Power Moons 5 times. | True | 4
+Mushroom | Grow seeds to collect Power Moons 10 times. | True | 4
+Mushroom | Catch 5 rabbits to collect Power Moons. | True | 4
+Mushroom | Catch 10 rabbits to collect Power Moons. | True | 4
+Mushroom | Dig up 15 Power Moons by Ground Pounding. | True | 4
+Mushroom | Dig up 45 Power Moons by Ground Pounding. | True | 4
+Mushroom | Collect 3 Power Moons by throwing your hat on things. | True | 4
+Mushroom | Collect 10 Power Moons by throwing your hat on things. | True | 4
+Mushroom | Collect 5 Power Moons from migrating birds. | True | 4
+Mushroom | Collect 3 Power Moons by wearing certain outfits. | True | 4
+Mushroom | Collect 8 Power Moons by wearing certain outfits. | True | 4
+Mushroom | Collect 15 Power Moons by wearing certain outfits. | True | 4
+Mushroom | Find 5 Bonneters hidden on people's heads. | True | 4
+Mushroom | Play the music that Toad wants to hear (5). | True | 4
+Mushroom | Collect 5 Power Moons using Hint Art. | True | 4
+Mushroom | Collect 15 Power Moons using Hint Art. | True | 4
+Mushroom | Collect 3 Power Moons playing Slots. | True | 4
+Mushroom | Win 10 Koopa Freerunning races. | True | 4
+Mushroom | Win 22 Koopa Freerunning races. | True | 4
+Mushroom | Receive passing scores in Koopa Trace-Walking (5). | True | 4
+Mushroom | Answer all of the Sphynx's questions correctly (3). | True | 4
+Mushroom | Collect 10 souvenirs and stickers. | True | 4
+Mushroom | Collect 20 souvenirs and stickers. | True | 4
+Mushroom | Collect 40 souvenirs and stickers. | True | 4
+Mushroom | Capture 20 targets. | True | 4
+Mushroom | Capture 35 targets. | True | 4
+Mushroom | Capture 45 targets. | True | 4
+Mushroom | Collect 15 hats. | True | 4
+Mushroom | Collect 35 hats. | True | 4
+Mushroom | Collect 15 outfits. | True | 4
+Mushroom | Collect 35 outfits. | True | 4
+Mushroom | Open 14 Moon Rocks. | True | 4
+Mushroom | Travel through 10 warp holes. | True | 4
+Mushroom | Activate 40 Checkpoint flags. | True | 4
+Mushroom | Activate 80 Checkpoint flags. | True | 4
+Mushroom | Collect 1000 coins. | True | 4
+Mushroom | Collect 5000 coins. | True | 4
+Mushroom | Collect 10000 coins. | True | 4
+Mushroom | Jump 10000 times. | True | 4
+Mushroom | Throw Cappy 5000 times. | True | 4
 Dark Side | Arrival at Rabbit Ridge! | True | 1
 Dark Side | Captain Toad on the Dark Side! | True | 1
 Dark Side | Breakdown Road: Hurry! | True | 1
