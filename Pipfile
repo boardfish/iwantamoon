@@ -11,7 +11,7 @@ name = "pypi"
 
 [requires]
 
-python_full_version = '3.6.2'
+python_full_version = '3.4.2'
 
 
 [packages]
