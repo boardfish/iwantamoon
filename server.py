@@ -16,7 +16,7 @@ logging.getLogger("flask_ask").setLevel(logging.DEBUG)
 api = Api(app)
 
 @ask.launch
-def moon():
+def launch_moon():
     conn = db_connect.connect()
     count = conn.execute("select Count(*) from moons").fetchone()[0]
     moon_id = randint(1,count)
