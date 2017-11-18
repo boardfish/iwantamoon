@@ -36,7 +36,7 @@ def random_moon():
     moon_id = randint(1,count)
     query = conn.execute("select * from moons where id =%d "  %int(moon_id))
     result = query.fetchone()
-    gen_moon(result)
+    return gen_moon(result)
 
 def gen_moon(record):
     sfx = choose_sfx(record['moon_type'])
