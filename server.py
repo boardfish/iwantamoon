@@ -37,6 +37,24 @@ def choose_sfx(x):
             5: "https://young-sierra-60676.herokuapp.com/8bitmoonget",
             }.get(x, "https://young-sierra-60676.herokuapp.com/moonget")
 
+def kingdom_names(query):
+    return {
+            'culmina crater': 'Darker Side',
+            'rabbit ridge': 'Dark Side',
+            'honeylune ridge': 'Moon',
+            'bowser\'s castle': 'Bowser\'s',
+            'volbono': 'Luncheon',
+            'tostarena': 'Sand',
+            'bonneton': 'Cap',
+            'fossil falls': 'Cascade',
+            'nimbus arena': 'Cloud',
+            'crumbleden': 'Ruined',
+            'lake lamode': 'Lake',
+            'bubblaine': 'Seaside',
+            'shiveria': 'Snow',
+            'peach\'s castle': 'Mushroom'
+            }[query]
+
 def search_moon(query):
     print(query)
     conn = db_connect.connect()
@@ -84,8 +102,10 @@ def intent_moon():
 def intent_search_moon(kingdom):
     moon = search_moon(kingdom)
     if not moon:
-        return audio("I couldn't find anything. Check your Alexa app to see if I got that right.")
-    return audio(moon[0]).play(moon[1]).simple_card(title='Let\'s Find A Moon in the {} Kingdom!'.format(kingdom), content=moon[0])
+        moon = search_moon(kingdom_names(kingdom))
+        if not moon:
+            return audio("I couldn't find anything. Check your Alexa app to see if I got that right.")
+    return audio(moon[0]).play(moon[1]).simple_card(title='Let\'s Find A Moon in the {} Kingdom!'.format(title(kingdom)), content=moon[0])
 
 class Moons(Resource):
     def get(self):
