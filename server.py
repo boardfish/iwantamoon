@@ -8,6 +8,14 @@ from json import dumps
 from flask.ext.jsonpify import jsonify
 from random import randint 
 import os
+#https://stackoverflow.com/questions/3728655/titlecasing-a-string-with-exceptions
+import re 
+def title(s):
+    word_list = re.split(' ', s)       # re.split behaves as expected
+    final = [word_list[0].capitalize()]
+    for word in word_list[1:]:
+        final.append(word.capitalize())
+    return " ".join(final)
 
 # Connect DB
 db_connect = create_engine('sqlite:///moons.db')
@@ -34,7 +42,7 @@ def search_moon(query):
     conn = db_connect.connect()
     # count = conn.execute("select Count(*) from moons").fetchone()[0]
     # moon_id = randint(1,count)
-    queryex = conn.execute("select * from moons where kingdom='%s' ORDER BY RANDOM() LIMIT 1 "  %str(query))
+    queryex = conn.execute("select * from moons where kingdom='%s' ORDER BY RANDOM() LIMIT 1 "  %title(str(query)))
     result = queryex.fetchone()
     if result is not None:
         return gen_moon(result)
