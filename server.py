@@ -31,7 +31,7 @@ def launch_moon():
     query = conn.execute("select * from moons where id =%d "  %int(moon_id))
     result = query.fetchone()
     template = "You got a moon! " + result['name']
-    sfx = choose_sfx(result['moon_type'])
+    sfx = choose_sfx(int(result['moon_type']))
     return audio(template).play(sfx)
 
 @ask.intent('MoonIntent')
