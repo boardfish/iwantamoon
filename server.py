@@ -5,6 +5,7 @@ from sqlalchemy import create_engine
 from json import dumps
 from flask.ext.jsonpify import jsonify
 from random import randint
+import os
 
 db_connect = create_engine('sqlite:///moons.db')
 app = Flask(__name__)
@@ -32,4 +33,4 @@ api.add_resource(RandomMoon, '/random') # Route_2
 
 
 if __name__ == '__main__':
-     app.run(port='5002')
+     app.run(port=os.getenv('PORT', '5002'))
