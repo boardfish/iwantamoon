@@ -21,7 +21,7 @@ def gen_moon():
     moon_id = randint(1,count)
     query = conn.execute("select * from moons where id =%d "  %int(moon_id))
     result = query.fetchone()
-    template = "You got a moon! " + result['name']
+    template = "**Let's find a moon!** " + result['name'] + " You can find this moon in the " + result['kingdom'] + " Kingdom" + ("post-game.", ".")[[result['is_postgame']]]
     sfx = choose_sfx(result['moon_type'])
     return [template, sfx]
 
