@@ -17,7 +17,7 @@
         <p>Want to test yourself in <i>Super Mario Odyssey?</i> Use the <b>Moon Hunter</b> to give yourself a random challenge!</p>
       </div>
       <a href="#" id="newMoon" class="marioMenuItem"><b>Random Moon</b></a>
-      <a href="#" id="stopwatch" class="marioMenuItem"><b>Start Timer</b> 00:00:00</a>
+      <textarea rows="1" class="marioMenuItem" id="stopwatch" readonly>00:00:00</textarea>
       <textarea  rows="1" class="marioMenuItem" id="moon" readonly></textarea>
       <br /><p class="text-center m-0">in the</p><br />
       <textarea  rows="1" class="marioMenuItem" id="kingdom" readonly></textarea>
@@ -51,14 +51,14 @@ var seconds = 0,
                 minutes++;
             }
         }
-        $("#stopwatch").text("Stop Timer " + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds ? (seconds > 9 ? seconds : "0" + seconds) : "00") + ":" + (milliseconds > 99 ? milliseconds : (milliseconds > 9 ? "0" + milliseconds : "00" + milliseconds)));
+        $("#stopwatch").text((minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds ? (seconds > 9 ? seconds : "0" + seconds) : "00") + ":" + (milliseconds > 99 ? milliseconds : (milliseconds > 9 ? "0" + milliseconds : "00" + milliseconds)));
         timer();
     }
     function timer() {
         t = setTimeout(add, 1);
     }
     $("#stopwatch").click(function() {
-        $('#stopwatch').text("Stop Timer 00:00:00");
+        $('#stopwatch').text("00:00:00");
         seconds = 0; minutes = 0; milliseconds = 0;
         timer()
     });
