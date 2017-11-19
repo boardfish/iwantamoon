@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css"/>
+  </head>
+  <body style="background-image:url(map.jpg);background-size:cover;background-repeat:no-repeat;">
+    <div class="col-4 my-3 text-white" style="transform: rotate(-1deg);">
+      <!-- <img class="mx-auto" src="powermoon.jpg" style="max-height:100px; max-width: 100%; width:auto;" data-src="powermoon.jpg" alt="Card image cap"> -->
+      <div class="p-2">
+        <h4>Super Mario Odyssey Moon Hunter</h4>
+        <p>Want to test yourself in <i>Super Mario Odyssey?</i> Use the <b>Moon Hunter</b> to give yourself a random challenge!</p>
+      </div>
+      <a href="#" id="newMoon" class="marioMenuItem"><b>Random Moon</b></a>
+      <a href="#" id="stopwatch" class="marioMenuItem"><b>Start Timer</b> 00:00:00</a>
+      <textarea  rows="1" class="marioMenuItem" id="moon" readonly></textarea>
+      <br /><p class="text-center m-0">in the</p><br />
+      <textarea  rows="1" class="marioMenuItem" id="kingdom" readonly></textarea>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script charset="utf-8">
+var seconds = 0, 
+          minutes = 0, 
+          milliseconds = 0,
+          t;
+      $("#newMoon").click(function(){
+          $.ajax({url: "https://young-sierra-60676.herokuapp.com/random", dataType: 'jsonp'}).success(function(result){
+              moonData = result.data[0];
+              $("#moon").val(moonData.name);
+              $("#kingdom").val(moonData.kingdom+" Kingdom");
+              $("stopwatch").text("00:00:00");
+              clearTimeout(t);
+              clearTimeout(t);
+              // calling it twice because it just doesn't wanna do it sometimes
+          });
+      });
+
+    function add() {
+        milliseconds++;
+        if (milliseconds >= 1000) {
+            milliseconds = 0;
+            seconds++;
+            if (seconds >= 60) {
+                seconds = 0;
+                minutes++;
+            }
+        }
+        $("#stopwatch").text("Stop Timer " + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds ? (seconds > 9 ? seconds : "0" + seconds) : "00") + ":" + (milliseconds > 99 ? milliseconds : (milliseconds > 9 ? "0" + milliseconds : "00" + milliseconds)));
+        timer();
+    }
+    function timer() {
+        t = setTimeout(add, 1);
+    }
+    $("#stopwatch").click(function() {
+        $('#stopwatch').text("Stop Timer 00:00:00");
+        seconds = 0; minutes = 0; milliseconds = 0;
+        timer()
+    });
+    </script>
+  </body>
+</html>

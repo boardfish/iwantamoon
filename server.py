@@ -105,7 +105,7 @@ def intent_search_moon(kingdom):
         moon = search_moon(kingdom_names(kingdom))
         if not moon:
             return audio("I couldn't find anything. Check your Alexa app to see if I got that right.")
-    return audio(moon[0]).play(moon[1]).simple_card(title='Let\'s Find A Moon in the {} Kingdom!'.format(title(kingdom)), content=moon[0])
+    return audio(moon[0]).play(moon[1]).simple_card(title='Let\'s Find A Moon in the {} Kingdom!'.format(title(moon[2])), content=moon[0])
 
 class Moons(Resource):
     def get(self):
