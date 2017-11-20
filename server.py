@@ -152,7 +152,7 @@ def render_static():
     return app.send_static_file('index.html')
 
 
-api.add_resource(Moons, '/') # Route_1
+api.add_resource(Moons, '/all') # Route_1
 api.add_resource(RandomMoon, '/random') # Route_2
 
 # Init Flask etc.
