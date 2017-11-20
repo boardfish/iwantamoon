@@ -10,6 +10,7 @@ from random import randint
 import os
 #https://stackoverflow.com/questions/3728655/titlecasing-a-string-with-exceptions
 import re 
+# Title case function to fix kingdom names for queries
 def title(s):
     word_list = re.split(' ', s)       # re.split behaves as expected
     final = [word_list[0].capitalize()]
@@ -37,6 +38,8 @@ def choose_sfx(x):
             5: "https://young-sierra-60676.herokuapp.com/8bitmoonget",
             }.get(x, "https://young-sierra-60676.herokuapp.com/moonget")
 
+# Helper: map kingdom aliases to their kingdoms. Alexa always provides these in
+#         lower case
 def kingdom_names(query):
     return {
             'culmina crater': 'Darker Side',
@@ -55,6 +58,7 @@ def kingdom_names(query):
             'peach\'s castle': 'Mushroom'
             }[query]
 
+# Search for a random moon in a given kingdom based on the provided statement
 def search_moon(query):
     print(query)
     conn = db_connect.connect()
@@ -67,6 +71,7 @@ def search_moon(query):
     else:
         return False
 
+# Give a random moon from the entire game
 def random_moon():
     conn = db_connect.connect()
     count = conn.execute("select Count(*) from moons").fetchone()[0]
@@ -75,6 +80,7 @@ def random_moon():
     result = query.fetchone()
     return gen_moon(result)
 
+# Parse out moon data and generate text template
 def gen_moon(record):
     sfx = choose_sfx(record['moon_type'])
     location = record['kingdom']
@@ -82,17 +88,13 @@ def gen_moon(record):
     template = "Let's find a moon! " + record['name'] + ". Try searching for this moon in the " + location + " Kingdom" + (" after you've beaten the game.", ".")[postgame]
     return [template, sfx, location, postgame]
 
-def get_moon_alexa():
-    moon = random_moon()
-    print("MOON:", moon)
-    print("audio("+ moon[0]+ ").play("+moon[1]+")")
-    return audio(moon[0]).play(moon[1]).simple_card(title='Let\'s Find A Moon!', content=moon[0])
-
+# Get random moon - Alexa says it and plays fanfare. Card also shown.
 @ask.launch
 def launch_moon():
     moon = random_moon()
     return audio(moon[0]).play(moon[1]).simple_card(title='Let\'s Find A Moon!', content=moon[0]+'\nThis'+('',' post-game ')[moon[3]]+ 'moon can be found in the '+moon[2]+' Kingdom.')
 
+# Same as above - don't know if I can decorate twice.
 @ask.intent('MoonIntent')
 def intent_moon():
     moon = random_moon()
